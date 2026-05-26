@@ -203,3 +203,23 @@ curl -X POST /api/notifications/send \
 ```bash
 curl GET /actuator/health
 ```
+
+---
+
+## Railway GitHub Actions Deployment
+
+This repository deploys automatically to Railway with GitHub Actions.
+
+Required GitHub repository secret:
+
+```text
+RAILWAY_TOKEN=<your Railway project token>
+```
+
+Optional GitHub repository secret, only needed when the Railway project has multiple services:
+
+```text
+RAILWAY_SERVICE_NAME=<your Railway service name>
+```
+
+The workflow runs on pushes to `main` or `master`, and can also be started manually from the GitHub Actions tab.
